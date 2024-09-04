@@ -1,0 +1,173 @@
+[gd_scene load_steps=13 format=3 uid="uid://bca1o6gqcy0mu"]
+
+[ext_resource type="PackedScene" uid="uid://cnjas8okalti" path="res://MainMap/main_map.tscn" id="1_0uud0"]
+[ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_a5x5f"]
+[ext_resource type="Texture2D" uid="uid://di5ll7duc4lcc" path="res://assets/ui/ulli_art/borda.png" id="2_bvwr6"]
+[ext_resource type="Script" path="res://MainMenu/PlayButton.gd" id="2_w8mge"]
+[ext_resource type="Texture2D" uid="uid://cm5w3ubmipsoe" path="res://assets/ui/right.png" id="3_33nl5"]
+[ext_resource type="FontFile" uid="uid://3g03rh87d7vx" path="res://assets/fonts/NoteToSelf-Regular.otf" id="3_gltwk"]
+[ext_resource type="Script" path="res://MainMenu/Sprite2D.gd" id="4_sg66c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iri0i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfqtw"]
+bg_color = Color(0.282353, 0.180392, 0.760784, 0.584314)
+
+[sub_resource type="Animation" id="Animation_eaoyf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/PlayButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Container/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_skilb"]
+resource_name = "start_game"
+length = 3.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Container/PlayButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMap")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"first_start"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fg5ru"]
+_data = {
+"RESET": SubResource("Animation_eaoyf"),
+"start_game": SubResource("Animation_skilb")
+}
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_a5x5f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bvwr6")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="MainMap" parent="." instance=ExtResource("1_0uud0")]
+
+[node name="Container" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iri0i")
+metadata/_edit_lock_ = true
+
+[node name="PlayButton" type="Button" parent="Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 44.0
+offset_right = 22.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfqtw")
+script = ExtResource("2_w8mge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container/PlayButton"]
+position = Vector2(36, 32)
+scale = Vector2(0.56, 0.48)
+texture = ExtResource("3_33nl5")
+script = ExtResource("4_sg66c")
+
+[node name="Label" type="RichTextLabel" parent="Container"]
+layout_mode = 2
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1128.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.113725, 0.466667, 0.556863, 1)
+theme_override_fonts/normal_font = ExtResource("3_gltwk")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "
+[center][wave amp=50.0 freq=5.0 connected=1]SUS em Foco"
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fg5ru")
+}
+
+[connection signal="pressed" from="Container/PlayButton" to="." method="_on_play_button_pressed"]

@@ -1,0 +1,18 @@
+{
+	"background":"file.png",
+	"characters":[
+		{
+			"path":"file.png",
+			"position":[1,2],
+			"isFlipped":false,
+			"zIndex":0
+		},
+		{
+			"path":"file.png",
+			"position":[4,4],
+			"isFlipped":true,
+			"zIndex":0
+		}
+	],
+	
+}

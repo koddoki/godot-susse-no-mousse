@@ -1,0 +1,268 @@
+[gd_scene load_steps=12 format=3 uid="uid://cnjas8okalti"]
+
+[ext_resource type="Script" path="res://MainMap/main_map.gd" id="1_p2mt1"]
+[ext_resource type="Texture2D" uid="uid://dcqg42fhq7rax" path="res://assets/ui/ulli_art/linhas.png" id="3_tadmi"]
+[ext_resource type="Texture2D" uid="uid://ix6tclpvja2d" path="res://assets/ui/ulli_art/selos.png" id="4_io8hu"]
+[ext_resource type="PackedScene" uid="uid://7rn67sngemns" path="res://spawn_point.tscn" id="4_ux1ep"]
+[ext_resource type="Script" path="res://MainMap/LevelPreviewer.gd" id="5_chf6g"]
+[ext_resource type="Script" path="res://MainMap/PlayerDetector.gd" id="5_sy5wn"]
+[ext_resource type="FontFile" uid="uid://3g03rh87d7vx" path="res://assets/fonts/NoteToSelf-Regular.otf" id="7_tb0fn"]
+
+[sub_resource type="Animation" id="Animation_lmye6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MapLevels:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Postcard/Linhas:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Postcard/Selos:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qgdyl"]
+resource_name = "first_load"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MapLevels:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn_animation"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Postcard/Linhas:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Postcard/Selos:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kb85x"]
+_data = {
+"RESET": SubResource("Animation_lmye6"),
+"first_load": SubResource("Animation_qgdyl")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrv0r"]
+size = Vector2(32, 32)
+
+[node name="MainMap" type="Node2D"]
+script = ExtResource("1_p2mt1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kb85x")
+}
+
+[node name="MapLevels" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="MapLevels"]
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 112.0
+offset_bottom = 128.0
+color = Color(0.305882, 0.368627, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="MapLevels"]
+offset_left = 112.0
+offset_top = 96.0
+offset_right = 448.0
+offset_bottom = 112.0
+color = Color(0.605274, 0.605274, 0.605274, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="MapLevels"]
+offset_left = 448.0
+offset_top = 80.0
+offset_right = 496.0
+offset_bottom = 128.0
+color = Color(0.305882, 0.368627, 1, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="MapLevels"]
+offset_left = 464.0
+offset_top = 128.0
+offset_right = 480.0
+offset_bottom = 384.0
+color = Color(0.605274, 0.605274, 0.605274, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="MapLevels"]
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 496.0
+offset_bottom = 432.0
+color = Color(0.305882, 0.368627, 1, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="MapLevels"]
+offset_left = 264.0
+offset_top = 400.0
+offset_right = 448.0
+offset_bottom = 416.0
+color = Color(0.605274, 0.605274, 0.605274, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="MapLevels"]
+offset_left = 216.0
+offset_top = 384.0
+offset_right = 264.0
+offset_bottom = 432.0
+color = Color(0.305882, 0.368627, 1, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="MapLevels"]
+offset_left = 232.0
+offset_top = 256.0
+offset_right = 248.0
+offset_bottom = 384.0
+color = Color(0.605274, 0.605274, 0.605274, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="MapLevels"]
+offset_left = 216.0
+offset_top = 208.0
+offset_right = 264.0
+offset_bottom = 256.0
+color = Color(0.305882, 0.368627, 1, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MapLevels"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapLevels/StaticBody2D"]
+polygon = PackedVector2Array(80, 104, 92, 96, 472, 96, 480, 104, 480, 408, 472, 416, 240, 416, 232, 408, 232, 208, 248, 208, 248, 384, 264, 400, 447.162, 400, 464, 384.419, 464, 127.914, 456, 120, 447.894, 112, 112, 112, 96, 128, 448, 128, 448, 384, 264, 384, 264, 192, 216, 192, 216, 432, 496, 432, 496, 80, 72, 80, 72, 312, 104, 312, 104, 128, 96, 128, 96, 304, 80, 304)
+
+[node name="ColorRect10" type="ColorRect" parent="MapLevels"]
+offset_left = 80.0
+offset_top = 128.0
+offset_right = 96.0
+offset_bottom = 304.0
+color = Color(0.605274, 0.605274, 0.605274, 1)
+
+[node name="Postcard" type="Node2D" parent="."]
+
+[node name="Linhas" type="Sprite2D" parent="Postcard"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(872, 376)
+scale = Vector2(0.358988, 0.257165)
+texture = ExtResource("3_tadmi")
+
+[node name="Selos" type="Sprite2D" parent="Postcard"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(864, 144)
+scale = Vector2(0.309231, 0.310909)
+texture = ExtResource("4_io8hu")
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SpawnPoint0" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
+position = Vector2(88, 280)
+
+[node name="SpawnPoint1" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
+
+[node name="LevelPreviewer" type="Node2D" parent="SpawnPoints/SpawnPoint1"]
+script = ExtResource("5_chf6g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
+
+[node name="PlayerDetector" type="Area2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
+script = ExtResource("5_sy5wn")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/PlayerDetector"]
+shape = SubResource("RectangleShape2D_xrv0r")
+
+[node name="VBoxContainer" type="ColorRect" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
+offset_left = 8.0
+offset_top = -96.0
+offset_right = 256.0
+color = Color(0.588235, 0.223529, 0.329412, 1)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/VBoxContainer"]
+offset_right = 2240.0
+offset_bottom = 320.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_tb0fn")
+theme_override_font_sizes/font_size = 200
+text = "Princípios do SUS"
+autowrap_mode = 3
+max_lines_visible = 1
+visible_ratio = -0.0588235
+
+[node name="Label2" type="Label" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/VBoxContainer"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 336.0
+offset_bottom = 56.0
+text = "AAAAAAAAA"
+
+[node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
+position = Vector2(472, 104)
+
+[node name="SpawnPoint3" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
+position = Vector2(472, 408)
+
+[node name="SpawnPoint4" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
+position = Vector2(240, 408)
+
+[node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
+position = Vector2(240, 224)

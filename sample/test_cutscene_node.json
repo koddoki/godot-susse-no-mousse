@@ -1,0 +1,56 @@
+[
+	{
+		"Background": {
+			"Path": "ImagePath.png"
+		},
+		"Itens": [
+			{
+				"Path": "Object.txt",
+				"PositionX": 1,
+				"PositionY": 2
+			}
+		],
+		"Options":[],
+		"Dialogue":[
+			{
+				"Title":"Capitão Batata",
+				"Text":"LOREM IPSUM, PORRAAAAA"
+			},
+			{
+				"Title":"Capitão Batata",
+				"Text":"iSSO FOI ESTRANHO"
+			},
+			{
+				"Title":"Capitão Batata",
+				"Text":"COMO DESLIGA LETRA GRANDE"
+			}
+		]
+	},
+	{
+		"Background": {
+			"Path": "ImagePath.png"
+		},
+		"Itens": [
+			{
+				"Path": "Object.txt",
+				"PositionX": 1,
+				"PositionY": 2
+			}
+		],
+		"Options":[],
+		"Dialogue":[
+			{
+				"Title":"Capitão Batata",
+				"Text":"LOREM IPSUM, PORRAAAAA"
+			},
+			{
+				"Title":"Capitão Batata",
+				"Text":"iSSO FOI ESTRANHO"
+			},
+			{
+				"Title":"Capitão Batata",
+				"Text":"COMO DESLIGA LETRA GRANDE"
+			}
+		]
+	}
+]

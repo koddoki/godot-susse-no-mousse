@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbue2npeku8yi"]
+
+[ext_resource type="Script" path="res://InteractibleUtils/InteractibleObject/InteractibleWord/interactible_word.gd" id="1_hginl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4866e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nifh"]
+bg_color = Color(0.309804, 0.309804, 0.309804, 0.145098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry4py"]
+bg_color = Color(0.956863, 0.956863, 0.956863, 0.541176)
+
+[node name="InteractibleWord" type="Node2D"]
+script = ExtResource("1_hginl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4866e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nifh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ry4py")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
