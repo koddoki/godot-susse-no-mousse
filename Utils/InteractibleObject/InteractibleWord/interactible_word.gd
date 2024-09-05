@@ -31,7 +31,7 @@ func _ready():
 	
 
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	if Engine.is_editor_hint():
 		word_texture.texture = load(texture_path)
 		word_texture.size = texture_size

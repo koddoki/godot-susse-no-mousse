@@ -2,6 +2,9 @@ extends Node2D
 
 
 @onready var animation := $AnimationPlayer
+@onready var current_level := $CurrentLevel
+
+
 var player : CharacterBody2D
 var spawnpoint : Marker2D
 @export var completed_levels : = 1
@@ -12,13 +15,12 @@ var format_string = "SpawnPoints/SpawnPoint%d"
 func _ready():
 	update_spawnpoint()
 	
-	for spawnpoint in $SpawnPoints.get_children():
-		spawnpoint.spawning_time.connect(spawn_player)
+	for spawn in $SpawnPoints.get_children():
+		spawn.spawning_time.connect(spawn_player)
 
 
 func first_start():
 	animation.play("first_load")
-
 
 
 func unlock_player():
@@ -47,9 +49,9 @@ func spawn_player():
 	add_child(player)
 
 
-func _on_level_previewer_a():
+func _on_level_previewer_start_level(level):
 	$MapLevels.visible = false
 	$Postcard.visible = false
 	$SpawnPoints.visible = false
-	get_node("Player").visible = false
-	$InteractiveLevel1.visible = true
+	get_node("Player").queue_free()
+	current_level.goto_scene(level)

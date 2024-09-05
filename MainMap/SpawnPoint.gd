@@ -1,10 +1,8 @@
 extends Marker2D
 
-@export var horacio : Curve
-@export var level : Node2D
-
 
 @onready var animation_player = $AnimationPlayer
+
 
 signal spawning_time
 

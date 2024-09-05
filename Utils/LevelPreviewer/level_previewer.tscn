@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://m8s2d1gtnsak"]
+
+[ext_resource type="Script" path="res://MainMap/LevelPreviewer.gd" id="1_po265"]
+[ext_resource type="Script" path="res://MainMap/PlayerDetector.gd" id="2_otx5v"]
+[ext_resource type="FontFile" uid="uid://3g03rh87d7vx" path="res://assets/fonts/NoteToSelf-Regular.otf" id="3_h6w8f"]
+[ext_resource type="FontFile" uid="uid://cheyxci6h3sw5" path="res://assets/fonts/Pretty_City_Kitties.otf" id="4_kcnit"]
+
+[sub_resource type="Animation" id="Animation_opq3h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PopUp:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5jpjw"]
+resource_name = "next_level"
+length = 1.5
+
+[sub_resource type="Animation" id="Animation_6job6"]
+resource_name = "open-close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PopUp:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_asta8"]
+_data = {
+"RESET": SubResource("Animation_opq3h"),
+"next_level": SubResource("Animation_5jpjw"),
+"open-close": SubResource("Animation_6job6")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrv0r"]
+size = Vector2(56, 48)
+
+[node name="LevelPreviewer" type="Node2D"]
+script = ExtResource("1_po265")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_asta8")
+}
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+script = ExtResource("2_otx5v")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(12, 8)
+shape = SubResource("RectangleShape2D_xrv0r")
+
+[node name="PopUp" type="Node2D" parent="."]
+position = Vector2(232, 0)
+scale = Vector2(1e-05, 1e-05)
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="ColorRect" parent="PopUp"]
+offset_left = -120.0
+offset_top = -48.0
+offset_right = 128.0
+offset_bottom = 48.0
+color = Color(0.588235, 0.223529, 0.329412, 1)
+
+[node name="Label" type="Label" parent="PopUp/VBoxContainer"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 2328.0
+offset_bottom = 272.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h6w8f")
+theme_override_font_sizes/font_size = 200
+text = "Princípios do SUS"
+
+[node name="Label2" type="Label" parent="PopUp/VBoxContainer"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 2328.0
+offset_bottom = 592.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("4_kcnit")
+theme_override_font_sizes/font_size = 200
+text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!
+Pressione espaço para continuar."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
+[connection signal="body_exited" from="PlayerDetector" to="." method="_on_player_detector_body_exited"]

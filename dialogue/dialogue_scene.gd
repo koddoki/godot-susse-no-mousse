@@ -7,6 +7,7 @@ extends Node2D
 @onready var characters : = $Characters
 @onready var spawn_positions : = $SpawnPositions
 
+
 @onready var default_texture = load("res://icon.svg")
 
 var current_csv_row = 0
@@ -15,7 +16,7 @@ signal next_button_pressed
 
 
 
-func update_scene(path_csv:String):
+func update_scene(_path_csv:String):
 	pass
 
 

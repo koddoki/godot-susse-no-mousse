@@ -1,14 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://cnjas8okalti"]
+[gd_scene load_steps=11 format=3 uid="uid://cnjas8okalti"]
 
 [ext_resource type="Script" path="res://MainMap/main_map.gd" id="1_p2mt1"]
+[ext_resource type="Script" path="res://MainMap/CurrentLevel.gd" id="2_ysdqk"]
 [ext_resource type="Texture2D" uid="uid://dcqg42fhq7rax" path="res://assets/ui/ulli_art/linhas.png" id="3_tadmi"]
 [ext_resource type="Texture2D" uid="uid://ix6tclpvja2d" path="res://assets/ui/ulli_art/selos.png" id="4_io8hu"]
 [ext_resource type="PackedScene" uid="uid://7rn67sngemns" path="res://spawn_point.tscn" id="4_ux1ep"]
-[ext_resource type="Script" path="res://MainMap/LevelPreviewer.gd" id="5_chf6g"]
-[ext_resource type="Script" path="res://MainMap/PlayerDetector.gd" id="5_sy5wn"]
-[ext_resource type="FontFile" uid="uid://3g03rh87d7vx" path="res://assets/fonts/NoteToSelf-Regular.otf" id="7_tb0fn"]
-[ext_resource type="FontFile" uid="uid://cheyxci6h3sw5" path="res://assets/fonts/Pretty_City_Kitties.otf" id="8_vncgy"]
-[ext_resource type="PackedScene" uid="uid://dnhbcsbhivh84" path="res://levels/level_2/interactive_level_1.tscn" id="9_x2vp0"]
+[ext_resource type="PackedScene" uid="uid://dnhbcsbhivh84" path="res://levels/level_1/level_1.tscn" id="5_eg8ef"]
+[ext_resource type="PackedScene" uid="uid://m8s2d1gtnsak" path="res://Utils/LevelPreviewer/level_previewer.tscn" id="6_63tjb"]
 
 [sub_resource type="Animation" id="Animation_lmye6"]
 length = 0.001
@@ -109,57 +107,12 @@ _data = {
 "first_load": SubResource("Animation_qgdyl")
 }
 
-[sub_resource type="Animation" id="Animation_opq3h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PopUp:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_5jpjw"]
-resource_name = "next_level"
-length = 1.5
-
-[sub_resource type="Animation" id="Animation_6job6"]
-resource_name = "open-close"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PopUp:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(1.5, 1.5)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_asta8"]
-_data = {
-"RESET": SubResource("Animation_opq3h"),
-"next_level": SubResource("Animation_5jpjw"),
-"open-close": SubResource("Animation_6job6")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrv0r"]
-size = Vector2(56, 48)
-
 [node name="MainMap" type="Node2D"]
 script = ExtResource("1_p2mt1")
 completed_levels = 0
 
-[node name="InteractiveLevel1" parent="." instance=ExtResource("9_x2vp0")]
-visible = false
+[node name="CurrentLevel" type="Node2D" parent="."]
+script = ExtResource("2_ysdqk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -265,60 +218,8 @@ position = Vector2(88, 280)
 
 [node name="SpawnPoint1" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 
-[node name="LevelPreviewer" type="Node2D" parent="SpawnPoints/SpawnPoint1"]
-script = ExtResource("5_chf6g")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
-libraries = {
-"": SubResource("AnimationLibrary_asta8")
-}
-
-[node name="PlayerDetector" type="Area2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
-script = ExtResource("5_sy5wn")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/PlayerDetector"]
-position = Vector2(12, 8)
-shape = SubResource("RectangleShape2D_xrv0r")
-
-[node name="PopUp" type="Node2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
-position = Vector2(232, 0)
-scale = Vector2(1e-05, 1e-05)
-metadata/_edit_group_ = true
-
-[node name="VBoxContainer" type="ColorRect" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/PopUp"]
-offset_left = -120.0
-offset_top = -48.0
-offset_right = 128.0
-offset_bottom = 48.0
-color = Color(0.588235, 0.223529, 0.329412, 1)
-
-[node name="Label" type="Label" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/PopUp/VBoxContainer"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 5.0
-offset_right = 2328.0
-offset_bottom = 272.0
-scale = Vector2(0.1, 0.1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_tb0fn")
-theme_override_font_sizes/font_size = 200
-text = "Princípios do SUS"
-
-[node name="Label2" type="Label" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/PopUp/VBoxContainer"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 32.0
-offset_right = 2328.0
-offset_bottom = 592.0
-scale = Vector2(0.1, 0.1)
-theme_override_fonts/font = ExtResource("8_vncgy")
-theme_override_font_sizes/font_size = 200
-text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!
-Pressione espaço para continuar."
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
+[node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint1" instance=ExtResource("6_63tjb")]
+level = ExtResource("5_eg8ef")
 
 [node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(472, 104)
@@ -332,6 +233,4 @@ position = Vector2(240, 408)
 [node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(240, 224)
 
-[connection signal="a" from="SpawnPoints/SpawnPoint1/LevelPreviewer" to="." method="_on_level_previewer_a"]
-[connection signal="body_entered" from="SpawnPoints/SpawnPoint1/LevelPreviewer/PlayerDetector" to="SpawnPoints/SpawnPoint1/LevelPreviewer" method="_on_player_detector_body_entered"]
-[connection signal="body_exited" from="SpawnPoints/SpawnPoint1/LevelPreviewer/PlayerDetector" to="SpawnPoints/SpawnPoint1/LevelPreviewer" method="_on_player_detector_body_exited"]
+[connection signal="start_level" from="SpawnPoints/SpawnPoint1/LevelPreviewer" to="." method="_on_level_previewer_start_level"]

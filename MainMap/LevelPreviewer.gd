@@ -1,20 +1,21 @@
 extends Node2D
 
+
+@export var level : PackedScene
+
+
 @onready var player_detector := $PlayerDetector
 @onready var animation_player := $AnimationPlayer
 
+
+signal start_level(level : PackedScene)
+
 var player_inside = false
-signal a
 
 
-#func _ready():
-	#player_detector.body_shape_entered.connect(_player_entered_area)
-	#player_detector.body_shape_exited.connect(_player_exited_area)
-
-
-func _process(delta):
+func _process(_delta):
 	if player_inside and Input.is_action_just_pressed("ui_accept"):
-		emit_signal("a")
+		start_level.emit(level)
 
 
 func _on_player_detector_body_entered(body):

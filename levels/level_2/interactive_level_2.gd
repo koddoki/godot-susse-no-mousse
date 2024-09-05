@@ -7,6 +7,8 @@ extends Node2D
 var cliques = 0
 var scenarios : Array
 
+signal end
+
 
 func _ready():
 	var json_as_text = FileAccess.get_file_as_string("res://levels/level_1/jsons/first_scene.json")
@@ -32,11 +34,9 @@ func next_scene():
 		var character_data = scenario["character_data"] if scenario.has("character_data") else null
 		dialogue_scene.update_text(title, text)
 		dialogue_scene.update_characters(character_data)
-		dialogue_scene.update_background(background) # TODO: This <-----------------
+		dialogue_scene.update_background(background)
 	else:
-		dialogue_scene.visible = false
-		if cliques >= 4:
-			print("Foi quatro cliques")
+		emit_signal("end")
 
 
 func _on_dialogue_scene_next_button_pressed():
