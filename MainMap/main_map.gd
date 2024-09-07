@@ -7,7 +7,7 @@ extends Node2D
 
 var player : CharacterBody2D
 var spawnpoint : Marker2D
-@export var completed_levels : = 1
+@export var completed_levels : = 0
 
 var format_string = "SpawnPoints/SpawnPoint%d"
 
@@ -55,3 +55,8 @@ func _on_level_previewer_start_level(level):
 	$SpawnPoints.visible = false
 	get_node("Player").queue_free()
 	current_level.goto_scene(level)
+
+
+func _on_current_level_return_to_map():
+	completed_levels += 1
+	animation.play("first_load")

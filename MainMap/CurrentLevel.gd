@@ -2,6 +2,7 @@ extends Node2D
 
 
 var current_level : Level
+signal return_to_map
 
 
 func _ready():
@@ -19,10 +20,11 @@ func _deferred_goto_scene(next_level : Level):
 	if current_level != null:
 		current_level.free()
 	current_level = next_level
-	current_level.end.connect(return_to_map())
+	current_level.end.connect(complete_level)
 	add_child(current_level)
 
 
-func return_to_map():
+func complete_level():
 	if current_level != null:
 		current_level.call_deferred("free")
+	return_to_map.emit()

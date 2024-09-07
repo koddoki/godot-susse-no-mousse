@@ -78,7 +78,7 @@ offset_right = 128.0
 offset_bottom = 48.0
 color = Color(0.588235, 0.223529, 0.329412, 1)
 
-[node name="Label" type="Label" parent="PopUp/VBoxContainer"]
+[node name="Title" type="Label" parent="PopUp/VBoxContainer"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 5.0
@@ -88,9 +88,8 @@ scale = Vector2(0.1, 0.1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_h6w8f")
 theme_override_font_sizes/font_size = 200
-text = "Princípios do SUS"
 
-[node name="Label2" type="Label" parent="PopUp/VBoxContainer"]
+[node name="Text" type="Label" parent="PopUp/VBoxContainer"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 32.0
@@ -99,8 +98,6 @@ offset_bottom = 592.0
 scale = Vector2(0.1, 0.1)
 theme_override_fonts/font = ExtResource("4_kcnit")
 theme_override_font_sizes/font_size = 200
-text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!
-Pressione espaço para continuar."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
