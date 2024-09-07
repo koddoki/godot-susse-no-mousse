@@ -13,6 +13,7 @@ func goto_scene(next_level : PackedScene):
 	var next_level_instance = next_level.instantiate()
 	if next_level_instance is Level:
 		call_deferred("_deferred_goto_scene", next_level_instance)
+		return
 	push_error("INPUT ERROR: next_level doesn't extends Level")
 
 

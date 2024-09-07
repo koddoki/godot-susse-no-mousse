@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://7rn67sngemns" path="res://spawn_point.tscn" id="4_ux1ep"]
 [ext_resource type="PackedScene" uid="uid://dnhbcsbhivh84" path="res://levels/level_1/level_1.tscn" id="5_eg8ef"]
 [ext_resource type="PackedScene" uid="uid://m8s2d1gtnsak" path="res://Utils/LevelPreviewer/level_previewer.tscn" id="6_63tjb"]
-[ext_resource type="PackedScene" uid="uid://c0v3m48f2fqrr" path="res://levels/level_2/interactive_level_2.tscn" id="8_3cuh5"]
+[ext_resource type="PackedScene" uid="uid://c0v3m48f2fqrr" path="res://levels/level_2/level2.tscn" id="8_d43rf"]
 
 [sub_resource type="Animation" id="Animation_lmye6"]
 length = 0.001
@@ -299,17 +299,17 @@ text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!P
 position = Vector2(472, 104)
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint2" instance=ExtResource("6_63tjb")]
-level = ExtResource("8_3cuh5")
-title = "Princípios do SUS"
-text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!Pressione espaço para continuar."
+level = ExtResource("8_d43rf")
+title = "Nível 2"
+text = "Textao sobre nivel 2"
 
 [node name="SpawnPoint3" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(472, 408)
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint3" instance=ExtResource("6_63tjb")]
-level = ExtResource("5_eg8ef")
-title = "Princípios do SUS"
-text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!Pressione espaço para continuar."
+level = ExtResource("8_d43rf")
+title = "Nivel 3"
+text = "Textão sobre o nivel 3"
 
 [node name="SpawnPoint4" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(240, 408)
