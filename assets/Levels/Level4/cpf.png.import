@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfmpx0b2heg1a"
-path="res://.godot/imported/zegota.png-a4b45f62f143f138c423dea2e7552ebd.ctex"
+uid="uid://b3u8sd1u4hxak"
+path="res://.godot/imported/cpf.png-3e82a9ee9edc7a05ee0779b531262363.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/ZeGotinha/zegota.png"
-dest_files=["res://.godot/imported/zegota.png-a4b45f62f143f138c423dea2e7552ebd.ctex"]
+source_file="res://assets/Levels/Level4/cpf.png"
+dest_files=["res://.godot/imported/cpf.png-3e82a9ee9edc7a05ee0779b531262363.ctex"]
 
 [params]
 
