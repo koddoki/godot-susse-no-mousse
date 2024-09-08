@@ -1,0 +1,15 @@
+[
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Dr Capi",
+	"text": "Universalidade, integralidade, Equidade, Descentralização, Regionalização, Hierarquização e Participação Social! Se juntarmos tudo isso...Temos o SUS! ",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+}
+]

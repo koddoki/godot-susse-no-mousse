@@ -7,17 +7,12 @@ extends Node2D
 @export var destino : = Marker2D
 @export var texture_size : Vector2
 
-# Variáveis do dialogo
-@export_file("*.json") var dialogue_json
-
 
 @onready var button : = $Button
 @onready var word_texture := $TextureRect
 
-
+signal button_pressed
 var corre : = false
-
-signal clicado(dialogue_json)
 
 
 func _ready():
@@ -28,7 +23,6 @@ func _ready():
 	word_texture.position.y = -int(texture_size.y/2)
 	button.position.x = -int(texture_size.x/2)
 	button.position.y = -int(texture_size.y/2)
-	
 
 
 func _process(_delta) -> void:
@@ -40,6 +34,7 @@ func _process(_delta) -> void:
 		word_texture.position.y = -int(texture_size.y/2)
 		button.position.x = -int(texture_size.x/2)
 		button.position.y = -int(texture_size.y/2)
+
 
 ## Updates multiple characters based on the provided data.
 ##
@@ -53,10 +48,9 @@ func _physics_process(delta):
 	if !Engine.is_editor_hint() and corre:
 		position = position.move_toward(destino.position, delta * 500)
 		if position == destino.position:
-			emit_signal("clicado", dialogue_json)
 			queue_free()
 
 
 func _on_button_pressed():
 	corre = true
-	
+	button_pressed.emit()

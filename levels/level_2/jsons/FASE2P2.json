@@ -1,0 +1,28 @@
+[
+  {
+	"background": "res://assets/Backgrounds/conferencia nacional.png",
+	"title": "Dr Capi",
+	"text": "Era como os Estados Unidos, mas nós decidimos que a saúde era um direito de todos e hoje somos referência no mundo todo!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/conferencia nacional.png",
+	"title": "Anna Saúde",
+	"text": "Nossa! Devia ser uma época muito dificil! Imagine não ter saúde pública! ",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  }
+]

@@ -1,0 +1,28 @@
+[
+{
+	"background": "res://assets/Backgrounds/conferencia nacional.png",
+	"title": "Dr Capi",
+	"text": "Isso mesmo! Com a Constituição de 88 tivemos um grande marco histórico, pela primeira vez a saúde foi reconhecida como um direito de todos e um dever do Estado.",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+},
+{
+	"background": "res://assets/Backgrounds/conferencia nacional.png",
+	"title": "Anna Saúde",
+	"text": "Foi essa conferencia que influenciou as ideias da nossa Constituição?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  }
+]

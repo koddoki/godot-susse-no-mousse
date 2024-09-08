@@ -1,0 +1,28 @@
+[
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "E quais são esses princípios?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },
+{
+	"background": "res://assets/Backgrounds/conferencia nacional.png",
+	"title": "Dr Capi",
+	"text": "E claro, em 1990, teve a Lei Orgânica da Saúde, que veio complementar a Constituição, detalhando a organização e o funcionamento do SUS. Essa lei foi essencial para colocar em prática os princípios e diretrizes estabelecidos na Constituição",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi2.png",
+		"row": 1,
+		"column": 5,
+		"is_flipped": false
+	  }
+	]
+}
+]

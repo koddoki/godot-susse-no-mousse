@@ -1,0 +1,93 @@
+[
+  {
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Nossa! É verdade! Até depois Doutor Capi!!! E olha que eu vou cobrar a visita ao Zé Gotinha em!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Dr Capi",
+	"text": "Claro Ana..Claro... Mas olha só a hora! Você não tem que se encontrar com a sua irmã?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi2.png",
+		"row": 1,
+		"column": 5,
+		"is_flipped": false
+	  }
+	]
+  },
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Podemos encontrar com ele depois?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },
+ {
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Dr Capi",
+	"text": "Ah...bem, ele era um mascote criado para promover a campanha de vacinação contra a poliomielite, mas que no final virou um dos símbolos do SUS!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi2.png",
+		"row": 1,
+		"column": 5,
+		"is_flipped": false
+	  }
+	]
+},
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Sim, eu adoro ele....",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Dr Capi",
+	"text": "O Zé Gotinha?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+},
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Nossa!!! Ele realmente é formado por ideais incríveis!! Mas...Desculpa a pergunta Dr. Capi... E o Zé Gotinha? De onde ele veio??",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  }
+]

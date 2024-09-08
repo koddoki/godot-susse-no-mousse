@@ -1,0 +1,28 @@
+[
+{
+	"background": "res://assets/Backgrounds/conferencia nacional.png",
+	"title": "Dr Capi",
+	"text": "Olha Ana, a ideia do SUS começou a se formar lá em 1986, com a 8ª Conferência Nacional de Saúde! Lá se discutiu amplamente a necessidade de algo que não existia até então no Brasil: uma saúde publica universal e gratuita!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+},
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Poxa Doutor Capi, mas como que se deu o início do SUS?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  }
+]
