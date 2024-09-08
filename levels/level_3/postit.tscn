@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cermugu5citsm"]
+
+[ext_resource type="Texture2D" uid="uid://8x1ststysohj" path="res://assets/Levels/Level3/postitbom2.png" id="1_mhce1"]
+[ext_resource type="Script" path="res://levels/level_3/draggable.gd" id="2_7n6px"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffl8q"]
+size = Vector2(530, 284)
+
+[node name="postit" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mhce1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ffl8q")
+
+[node name="Draggable" type="Button" parent="."]
+offset_left = -277.0
+offset_top = -143.0
+offset_right = 277.0
+offset_bottom = 143.0
+script = ExtResource("2_7n6px")
