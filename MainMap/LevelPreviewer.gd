@@ -25,6 +25,7 @@ func _ready():
 func _process(_delta):
 	if player_inside and Input.is_action_just_pressed("ui_accept"):
 		start_level.emit(level)
+		queue_free()
 
 
 func _on_player_detector_body_entered(body):
