@@ -1,0 +1,119 @@
+[
+{
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Maria Saúde",
+    "text": "Pois é! Será que na nossa vizinhança tem focos?",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/irmã.png",
+        "row": 1,
+        "column": 5,
+        "is_flipped": true
+      }
+    ]
+  },
+{
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Anna Saúde",
+    "text": "Meu deus! Temos que tomar cuidado!!!! Ainda Mais você gravida!",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+        "row": 1,
+        "column": 5,
+        "is_flipped": true
+      }
+    ]
+  },
+{
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Biomédica Julia",
+    "text": "O SUS tem um papel fundamental na coordenação das ações de controle e prevenção da dengue. Nós realizamos campanhas de conscientização, inspeções em áreas de risco e atendemos os pacientes diagnosticados com dengue. Mas a colaboração da população é essencial.",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/biomed.png",
+        "row": 1,
+        "column": 1,
+        "is_flipped": true
+      }
+    ]
+  },
+{
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Repórter Dulce",
+    "text": "E qual é o papel do SUS nesse processo?",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/reporter.png",
+        "row": 1,
+        "column": 1,
+        "is_flipped": true
+      }
+    ]
+  },
+{
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Biomédica Julia",
+    "text": "Boa noite! A primeira coisa que precisamos fazer é eliminar todos os focos de água parada. Isso inclui vasos de plantas, calhas, pneus e qualquer outro recipiente que possa acumular água.",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/biomed.png",
+        "row": 1,
+        "column": 1,
+        "is_flipped": true
+      }
+    ]
+  },
+{
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Repórter Dulce",
+    "text": "Para nos ajudar a entender melhor, vamos falar com a biomedica epidemiologista Julia, do SUS, que está aqui para nos orientar sobre as medidas que podemos tomar.",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/reporter.png",
+        "row": 1,
+        "column": 5,
+        "is_flipped": true
+      }
+    ]
+  },  
+{
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Ramon, Pai",
+    "text": "Pessoal, prestem atenção. Isso é sério. Precisamos fazer nossa parte para evitar a dengue.",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/ramon pai metaleiro.png",
+        "row": 1,
+        "column": 2,
+        "is_flipped": true
+      }
+    ]
+  },
+  {
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Repórter Dulce",
+    "text": "A dengue é uma doença grave transmitida pelo mosquito Aedes aegypti, e sua prevenção depende da eliminação de focos de água parada onde o mosquito se reproduz.",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/reporter.png",
+        "row": 1,
+        "column": 5,
+        "is_flipped": true
+      }
+    ]
+  },
+  {
+    "background": "res://assets/Levels/Level8/tv.png",
+    "title": "Repórter Dulce",
+    "text": "Boa noite. Hoje, nossa reportagem especial é sobre a crescente epidemia de dengue que está atingindo nossa cidade.",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/reporter.png",
+        "row": 1,
+        "column": 5,
+        "is_flipped": true
+      }
+    ]
+  }
+]

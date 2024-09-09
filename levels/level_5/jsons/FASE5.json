@@ -1,0 +1,54 @@
+[
+{
+    "background": "res://assets/Backgrounds/coleta.png",
+    "title": "Maria Saúde",
+    "text": "Muito Obrigada!",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/irmã.png",
+        "row": 1,
+        "column": 5,
+        "is_flipped": true
+      }
+    ]
+  },  
+{
+    "background": "res://assets/Backgrounds/coleta.png",
+    "title": "Doutora Anita",
+    "text": "Não! e você pode ter acesso a esses resultados pelo aplicativo de saúde de sua cidade.",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/dra.png",
+        "row": 1,
+        "column": 1,
+        "is_flipped": true
+      }
+    ]
+  },
+  {
+    "background": "res://assets/Backgrounds/coleta.png",
+    "title": "Anna Saúde",
+    "text": "Nossa, que incrível, mas esses resultados demoram para sair?",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+        "row": 1,
+        "column": 5,
+        "is_flipped": false
+      }
+    ]
+  },
+  {
+    "background": "res://assets/Backgrounds/coleta.png",
+    "title": "Doutora Anita",
+    "text": "Terminamos todos os atendimentos hoje! Você sabia que todos os exames realizados nas UBS são gratuitos? O SUS conta com os atendimentos dos laboratórios municipais que funcionam 24 horas por dia",
+    "character_data": [
+      {
+        "character_texture": "res://assets/Characters/Others/dra.png",
+        "row": 2,
+        "column": 5,
+        "is_flipped": true
+      }
+    ]
+  }
+]
