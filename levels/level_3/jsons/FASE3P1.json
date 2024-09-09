@@ -1,0 +1,67 @@
+[
+  {
+	"background": "res://assets/Backgrounds/fundo sus.png",
+	"title": "Anna Saúde",
+	"text": "Nossa, viu só! A Obra já acabou!! Parece que foi ontem que começaram a construir essa unidade aqui!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo sus.png",
+	"title": "Maria Saúde",
+	"text": "Ta de brincadeira comigo? Já faz bastante tempo que está construindo… e já era hora! Nosso bairro era um dos maiores vazios em assistência de atenção primária da região, sem falar do baixo índice de cobertura de estratégia de saúde da família…",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 2,
+		"is_flipped": true
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo sus.png",
+	"title": "Anna Saúde",
+	"text": "Você parece o nosso irmão falando. Eu não tenho paciência pra política como vocês.",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo sus.png",
+	"title": "Maria Saúde",
+	"text": "Pois saiba que tudo é política. Agora que você é mais velho vai perceber isso e…",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 4,
+		"is_flipped": true
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo sus.png",
+	"title": "Maria Saúde",
+	"text": "Olha, a questão é que nosso bairro tem tudo para abrir uma unidade, e eu fico feliz por estar já abrindo uma! Que tal nós irmos lá já que seu novo hiperfoco é o SUS? Agora vou poder fazer meu pré natal mais próximo de casa! Você poderia muito bem me acompanhar e já conhecer a nova unidade.",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  }
+]

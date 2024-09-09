@@ -1,54 +1,54 @@
 [
   {
-    "background": "res://assets/Backgrounds/sala observação.png",
-    "title": "Doutora Anita",
-    "text": "Maria Saúde!",
-    "character_data": [
-      {
-        "character_texture": "res://assets/Characters/Others/dra.png",
-        "row": 2,
-        "column": 1,
-        "is_flipped": true
-      }
-    ]
+	"background": "res://assets/Backgrounds/sala observação.png",
+	"title": "Doutora Anita",
+	"text": "Maria Saúde!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
   },
   {
-    "background": "res://assets/Backgrounds/sala observação.png",
-    "title": "Doutora Anita",
-    "text": "Agora podemos iniciar os atendimentos agendados chamando pela ordem!",
-    "character_data": [
-      {
-        "character_texture": "res://assets/Characters/Others/dra.png",
-        "row": 2,
-        "column": 1,
-        "is_flipped": true
-      }
-    ]
+	"background": "res://assets/Backgrounds/sala observação.png",
+	"title": "Doutora Anita",
+	"text": "Agora podemos iniciar os atendimentos agendados chamando pela ordem!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
   },
   {
-    "background": "res://assets/Backgrounds/sala observação.png",
-    "title": "Maria Saúde",
-    "text": "Sim Ana....Lembrei. Trouxe também o papel de agendamento que é importante para saberem quais exames eu preciso fazer.",
-    "character_data": [
-      {
-        "character_texture": "res://assets/Characters/Others/irmã.png",
-        "row": 1,
-        "column": 5,
-        "is_flipped": true
-      }
-    ]
+	"background": "res://assets/Backgrounds/sala observação.png",
+	"title": "Maria Saúde",
+	"text": "Sim Ana....Lembrei. Trouxe também o papel de agendamento que é importante para saberem quais exames eu preciso fazer.",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 1,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
   },
   {
-    "background": "res://assets/Backgrounds/sala observação.png",
-    "title": "Anna Saúde",
-    "text": "Você pelo menos lembrou de trazer todos os seus documentos hoje?",
-    "character_data": [
-      {
-        "character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
-        "row": 2,
-        "column": 1,
-        "is_flipped": true
-      }
-    ]
+	"background": "res://assets/Backgrounds/sala observação.png",
+	"title": "Anna Saúde",
+	"text": "Você pelo menos lembrou de trazer todos os seus documentos hoje?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
   }
 ]

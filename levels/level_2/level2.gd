@@ -36,7 +36,6 @@ func _on_interactible_word_clicado():
 
 
 func next_scene():
-	print("scenarios.size() :" + str(scenarios.size()))
 	if scenarios.size() > 0:
 		var scenario = scenarios.pop_back()
 		var background_path = scenario["background"] if scenario.has("background") else null

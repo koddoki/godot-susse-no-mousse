@@ -1,15 +1,15 @@
 [
   {
-    "background": "res://assets/Backgrounds/sala observação.png",
-    "title": "Doutora Anita",
-    "text": "Podemos realizar a coleta seguindo os procedimentos adequados pre analíticos? Ah ótimo! Tudo perfeito!",
-    "character_data": [
-      {
-        "character_texture": "res://assets/Characters/Others/dra.png",
-        "row": 2,
-        "column": 1,
-        "is_flipped": true
-      }
-    ]
+	"background": "res://assets/Backgrounds/sala observação.png",
+	"title": "Doutora Anita",
+	"text": "Podemos realizar a coleta seguindo os procedimentos adequados pre analíticos? Ah ótimo! Tudo perfeito!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
   }
 ]

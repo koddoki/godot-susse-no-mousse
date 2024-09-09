@@ -1,0 +1,145 @@
+[
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Maria Saúde",
+	"text": "Ah, muito obrigada pela informação! Olha só aqui meus documentos!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },    
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Doutora Anita",
+	"text": "Ah, perfeito!!! Mas oh, só lembrando, Através do app conecte SUS você consegue um com o seu CPF e senha do gov.br, lá você pode fazer o cartão nacional de saúde. Qualquer coisa, se você trouxer um documento de identificação e um comprovante de residência pode fazer aqui mesmo seu cartão do SUS!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+  },   
+ {
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Maria Saúde",
+	"text": "Ah! Nossa, sim, eu tenho!!! ",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },  
+  {
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Doutora Anita",
+	"text": "ah sim, então imagino que você já tem o cadastro SUS?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+  },  
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Anna Saúde",
+	"text": "Ah, na verdade precisamos de ajuda sim! Minha irmã viu que o posto abriu e veio começar o pré natal dela aqui, que é mais perto de casa.",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  },  
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Doutora Anita",
+	"text": "Olá! Bem vindos ao posto de atendimento Professor Germano! Vocês precisam de ajuda para uma consulta",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+  },  
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Anna Saúde",
+	"text": "Poxa…se você não sabe quem dirá eu! Não é melhor a gente pedir ajuda para a moça ali? ",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  },
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Maria Saúde",
+	"text": "Bem, acredito que para iniciar o acompanhamento eu tenho que levar um exame beta… e… acho que o documento de identificação e comprovante de residência.",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Anna Saúde",
+	"text": "Quais são os documentos mesmo?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo sus.png",
+	"title": "Maria Saúde",
+	"text": "ah....",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 1,
+		"column": 5,
+		"is_flipped": false
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo sus.png",
+	"title": "Anna Saúde",
+	"text": "Bem… chegamos, você lembrou de trazer todos os documentos necessários?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  }
+]
