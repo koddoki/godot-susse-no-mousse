@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnjas8okalti"]
+[gd_scene load_steps=14 format=3 uid="uid://cnjas8okalti"]
 
 [ext_resource type="Script" path="res://MainMap/main_map.gd" id="1_p2mt1"]
 [ext_resource type="Script" path="res://MainMap/CurrentLevel.gd" id="2_ysdqk"]
@@ -180,6 +180,12 @@ _data = {
 "first_load": SubResource("Animation_qgdyl")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2pgp"]
+size = Vector2(10, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gq6jg"]
+size = Vector2(48, 8)
+
 [node name="MainMap" type="Node2D"]
 script = ExtResource("1_p2mt1")
 
@@ -295,6 +301,12 @@ level = ExtResource("5_eg8ef")
 title = "Princípios do SUS"
 text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!Pressione espaço para continuar."
 
+[node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer/StaticBody2D"]
+position = Vector2(52, 0)
+shape = SubResource("RectangleShape2D_h2pgp")
+
 [node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(472, 104)
 
@@ -302,6 +314,12 @@ position = Vector2(472, 104)
 level = ExtResource("8_d43rf")
 title = "Nível 2"
 text = "Textao sobre nivel 2"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint2/LevelPreviewer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnPoints/SpawnPoint2/LevelPreviewer/StaticBody2D"]
+position = Vector2(0, 44)
+shape = SubResource("RectangleShape2D_gq6jg")
 
 [node name="SpawnPoint3" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(472, 408)
@@ -311,6 +329,12 @@ level = ExtResource("8_d43rf")
 title = "Nivel 3"
 text = "Textão sobre o nivel 3"
 
+[node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint3/LevelPreviewer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnPoints/SpawnPoint3/LevelPreviewer/StaticBody2D"]
+position = Vector2(-48, 0)
+shape = SubResource("RectangleShape2D_h2pgp")
+
 [node name="SpawnPoint4" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(240, 408)
 
@@ -319,6 +343,13 @@ level = ExtResource("5_eg8ef")
 title = "Princípios do SUS"
 text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!Pressione espaço para continuar."
 
+[node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint4/LevelPreviewer"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnPoints/SpawnPoint4/LevelPreviewer/StaticBody2D"]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_gq6jg")
+
 [node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("4_ux1ep")]
 position = Vector2(240, 224)
 
@@ -326,6 +357,8 @@ position = Vector2(240, 224)
 level = ExtResource("5_eg8ef")
 title = "Princípios do SUS"
 text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!Pressione espaço para continuar."
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint5/LevelPreviewer"]
 
 [connection signal="return_to_map" from="CurrentLevel" to="." method="_on_current_level_return_to_map"]
 [connection signal="start_level" from="SpawnPoints/SpawnPoint1/LevelPreviewer" to="." method="_on_level_previewer_start_level"]

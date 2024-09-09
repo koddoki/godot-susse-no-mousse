@@ -1,4 +1,4 @@
-extends Node2D
+extends Level
 
 @onready var word_atractor : = $WordAtractor
 @onready var animation_player : = $AnimationPlayer
@@ -8,8 +8,6 @@ extends Node2D
 var cliques = 0
 var jsons_lidos = 1
 var scenarios : Array
-
-signal end
 
 
 func _ready():
