@@ -10,6 +10,8 @@ func _ready():
 	
 	button_down.connect(_on_button_down)
 	button_up.connect(_on_button_up)
+	
+	modulate.a = 0
 
 
 func _process(delta):
