@@ -21,13 +21,6 @@ func _ready():
 	text_label.text = text
 
 
-
-func _process(_delta):
-	if player_inside and Input.is_action_just_pressed("ui_accept"):
-		start_level.emit(level)
-		queue_free()
-
-
 func _on_player_detector_body_entered(body):
 	if body is CharacterBody2D:
 		player_inside = true
@@ -38,3 +31,8 @@ func _on_player_detector_body_exited(body):
 	if body is CharacterBody2D:
 		player_inside = false
 		animation_player.play_backwards("open-close")
+
+
+func _on_button_pressed():
+	start_level.emit(level)
+	queue_free()

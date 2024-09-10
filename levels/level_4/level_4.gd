@@ -17,7 +17,6 @@ func _ready():
 
 
 func next_scene():
-	print(scenarios.size())
 	if scenarios.size() > 0:
 		var scenario = scenarios.pop_back()
 		var background_path = scenario["background"] if scenario.has("background") else null
@@ -36,13 +35,20 @@ func next_scene():
 			scenarios = JSON.parse_string(json_as_text)
 			json_count += 1
 			
+			next_scene()
+			return
+		2:
+			var json_as_text = FileAccess.get_file_as_string("res://levels/level_4/jsons/FASE4P3.json")
+			scenarios = JSON.parse_string(json_as_text)
+			json_count += 1
+			
 			$Syringe.visible = true
 			$BloodButton.visible = true
 			$BraçoSangue.visible = true
 			dialogue_scene.visible = false
 			
 			return
-		2:
+		3:
 			end.emit()
 			return
 	print("Erro fudeu")
@@ -51,13 +57,6 @@ func next_scene():
 
 func _on_dialogue_scene_next_button_pressed():
 	next_scene()
-
-
-func _on_blood_button_pressed():
-	$BloodButton.queue_free()
-	$Syringe.queue_free()
-	$Cotton.visible = true
-	$CottonButton.visible = true
 
 
 func _on_cotton_button_pressed():
@@ -69,5 +68,8 @@ func _on_cotton_button_pressed():
 	next_scene()
 
 
-func _on_blood_button_button_down():
-	pass # Replace with function body.
+func _on_syringe_terminou():
+	$BloodButton.queue_free()
+	$Syringe.queue_free()
+	$Cotton.visible = true
+	$CottonButton.visible = true

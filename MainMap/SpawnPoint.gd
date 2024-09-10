@@ -15,3 +15,6 @@ func emit_signal_spawning_time():
 	emit_signal("spawning_time")
 
 
+func selado():
+	if has_node("Selo"):
+		$Selo.visible = true

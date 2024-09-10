@@ -2,7 +2,7 @@
   {
 	"background": "res://assets/Backgrounds/fundo parque genérico.png",
 	"title": "Anna Saúde",
-	"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id dui neque. Suspendisse potenti. Curabitur elit nulla, rutrum et tortor.",
+	"text": "Beleza!!! Estou pronta para entrar em ação! Vamos trabalhar juntos para resolver problemas, atender pacientes e melhorar cada vez mais o sistema de saúde. Hora de colocar as mãos à obra!",
 	"character_data": [
 	  {
 		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
@@ -15,7 +15,7 @@
   {
 	"background": "res://assets/Backgrounds/fundo parque genérico.png",
 	"title": "Dr Capi",
-	"text": "Lorem ipsum 2 dolor sit amet, consectetur adipiscing elit. Quisque id dui neque. Suspendisse potenti. Curabitur elit nulla, rutrum et tortor.",
+	"text": "Olha Ana, vamos começar pelo...começo! Vou te contar um pouco sobre a história e importância desse sistema tão importante que cuida de todos os brasileiros!",
 	"character_data": [
 	  {
 		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
@@ -24,5 +24,70 @@
 		"is_flipped": true
 	  }
 	]
-  }
+  },
+ {
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Nossa, isso realmente é incrível! As vezes eu sinto que ele é tão presente no nosso dia a dia e, ainda sim, não sabemos muito sobre ele... ",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 2,
+		"is_flipped": false
+	  }
+	]
+  },
+ {
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Dr Capi",
+	"text": "Não!!! Ele é muito abrangente! Além disso, o SUS tem passado por muitas transformações e desafios ao longo dos anos, mas seu compromisso com a saúde pública e a promoção da equidade continua firme. Ele se tornou um modelo internacionalmente reconhecido de sistema de saúde pública e dessa forma, todos podem contar com consultas, exames, vacinas e até mesmo cirurgias de forma gratuita..., mas já estou me deixando levar um pouco aqui ",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
+		"row": 4,
+		"column": 4,
+		"is_flipped": true
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Calma lá, quer dizer que ele não é apenas um serviço de emergência?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 2,
+		"is_flipped": false
+	  }
+	]
+  },
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Dr Capi",
+	"text": "Poxa Ana, fico muito feliz que você se interesse pelo SUS!! Nele todos têm acesso a atendimento médico de qualidade, independentemente da sua condição financeira, mas, além disso, ele tambem presta serviços como vigilância epidemiológica, sanitária e ambiental, sabia?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/DrCapi/drcapi3.png",
+		"row": 4,
+		"column": 4,
+		"is_flipped": true
+	  }
+	]
+  },
+{
+	"background": "res://assets/Backgrounds/fundo parque genérico.png",
+	"title": "Anna Saúde",
+	"text": "Olá!! Meu nome é Ana Saúde, e eu estou embarcando numa jornada para saber mais a respeito do nosso sistema único de saúde, o SUS! Eu sei, eu sei... todos já ouviram falar dele, mas será que conhecemos de verdade sobre como ele funciona?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 2,
+		"is_flipped": false
+	  }
+	]
+  },
 ]

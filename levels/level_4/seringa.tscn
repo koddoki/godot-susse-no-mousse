@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://ug4kwbc676x"]
+
+[ext_resource type="Script" path="res://levels/level_4/seringa.gd" id="1_kt4g0"]
+[ext_resource type="Texture2D" uid="uid://ct22gcq2om28c" path="res://assets/Levels/Level7/base_seringa.png" id="2_uvcgi"]
+[ext_resource type="Texture2D" uid="uid://b0llh48vy88nq" path="res://assets/Levels/Level7/corpo_seringa.png" id="3_elb2d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvhvg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bws47"]
+bg_color = Color(0.81, 0, 0, 0.435294)
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+
+[node name="seringa" type="Node2D"]
+scale = Vector2(0.474419, 0.573643)
+script = ExtResource("1_kt4g0")
+
+[node name="BaseSeringa" type="Sprite2D" parent="."]
+position = Vector2(63.2352, 1.74561e-05)
+texture = ExtResource("2_uvcgi")
+
+[node name="CorpoSeringa" type="Sprite2D" parent="."]
+scale = Vector2(0.764706, 0.990991)
+texture = ExtResource("3_elb2d")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -86.0
+offset_top = -30.0
+offset_right = 135.0
+offset_bottom = 38.0
+theme_override_styles/background = SubResource("StyleBoxFlat_yvhvg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bws47")
+fill_mode = 1
+show_percentage = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 110.0
+offset_top = -30.0
+offset_right = 129.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)

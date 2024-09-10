@@ -1,14 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://7rn67sngemns"]
+[gd_scene load_steps=8 format=3 uid="uid://7rn67sngemns"]
 
 [ext_resource type="Script" path="res://MainMap/SpawnPoint.gd" id="1_wr73b"]
 [ext_resource type="Texture2D" uid="uid://2hqrwyocdcku" path="res://assets/ui/star.png" id="2_km7xn"]
 [ext_resource type="Texture2D" uid="uid://dk5lbioqbo51w" path="res://assets/sus.png" id="3_ynwti"]
-
-[sub_resource type="Curve" id="Curve_0ki7m"]
-min_value = -1024.0
-max_value = 297.1
-_data = [Vector2(0, -517.277), 0.0, 0.0, 0, 0, Vector2(0.258772, 57.3113), 386.829, 386.829, 0, 0, Vector2(0.692982, -680.152), 0.0, 0.0, 0, 0]
-point_count = 3
 
 [sub_resource type="Animation" id="Animation_y4qs7"]
 length = 0.001
@@ -71,11 +65,14 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.9),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.9, 1),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"emit_signal_spawning_time"
+}, {
+"args": [],
+"method": &"selado"
 }]
 }
 tracks/1/type = "bezier"
@@ -151,7 +148,6 @@ _data = {
 [node name="SpawnPoint" type="Marker2D"]
 position = Vector2(88, 104)
 script = ExtResource("1_wr73b")
-horacio = SubResource("Curve_0ki7m")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

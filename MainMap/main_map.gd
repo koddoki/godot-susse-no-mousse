@@ -59,4 +59,4 @@ func _on_level_previewer_start_level(level):
 
 func _on_current_level_return_to_map():
 	completed_levels += 1
-	animation.play("first_load")
+	animation.play("normal_load")

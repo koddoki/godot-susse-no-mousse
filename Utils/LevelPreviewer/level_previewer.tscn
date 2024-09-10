@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://m8s2d1gtnsak"]
+[gd_scene load_steps=12 format=3 uid="uid://m8s2d1gtnsak"]
 
 [ext_resource type="Script" path="res://MainMap/LevelPreviewer.gd" id="1_po265"]
 [ext_resource type="Script" path="res://MainMap/PlayerDetector.gd" id="2_otx5v"]
 [ext_resource type="FontFile" uid="uid://3g03rh87d7vx" path="res://assets/fonts/NoteToSelf-Regular.otf" id="3_h6w8f"]
 [ext_resource type="FontFile" uid="uid://cheyxci6h3sw5" path="res://assets/fonts/Pretty_City_Kitties.otf" id="4_kcnit"]
+[ext_resource type="Texture2D" uid="uid://dtbnurcspmswo" path="res://assets/ui/buttonStart.png" id="5_bkaf5"]
 
 [sub_resource type="Animation" id="Animation_opq3h"]
 length = 0.001
@@ -50,6 +51,8 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrv0r"]
 size = Vector2(56, 48)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdtlh"]
+
 [node name="LevelPreviewer" type="Node2D"]
 script = ExtResource("1_po265")
 
@@ -69,7 +72,6 @@ shape = SubResource("RectangleShape2D_xrv0r")
 [node name="PopUp" type="Node2D" parent="."]
 position = Vector2(232, 0)
 scale = Vector2(1e-05, 1e-05)
-metadata/_edit_group_ = true
 
 [node name="VBoxContainer" type="ColorRect" parent="PopUp"]
 offset_left = -120.0
@@ -94,7 +96,7 @@ layout_mode = 0
 offset_left = 8.0
 offset_top = 32.0
 offset_right = 2328.0
-offset_bottom = 592.0
+offset_bottom = 299.0
 scale = Vector2(0.1, 0.1)
 theme_override_fonts/font = ExtResource("4_kcnit")
 theme_override_font_sizes/font_size = 200
@@ -102,5 +104,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="Button" type="Button" parent="PopUp"]
+offset_left = 74.0
+offset_top = 4.0
+offset_right = 182.0
+offset_bottom = 112.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rdtlh")
+icon = ExtResource("5_bkaf5")
+flat = true
+
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
 [connection signal="body_exited" from="PlayerDetector" to="." method="_on_player_detector_body_exited"]
+[connection signal="pressed" from="PopUp/Button" to="." method="_on_button_pressed"]
