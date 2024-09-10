@@ -1,21 +1,98 @@
-[gd_scene load_steps=10 format=3 uid="uid://ce2kdkha7w27"]
+[gd_scene load_steps=16 format=3 uid="uid://ce2kdkha7w27"]
 
 [ext_resource type="Script" path="res://levels/level_4/level_4.gd" id="1_it3b4"]
 [ext_resource type="PackedScene" uid="uid://b6tg1l8pm2s2s" path="res://dialogue/dialogue_scene.tscn" id="2_0gw3k"]
 [ext_resource type="Texture2D" uid="uid://btlfs2epco1pi" path="res://assets/Levels/Level7/algod.png" id="3_ygeax"]
+[ext_resource type="Script" path="res://levels/level_4/Cotton.gd" id="4_d6p57"]
 [ext_resource type="Texture2D" uid="uid://bjx6ntf7x7mtq" path="res://assets/Levels/Level7/BRAÇO SANGUE.png" id="4_om0qj"]
 [ext_resource type="Texture2D" uid="uid://c4yliohfv10l3" path="res://assets/Levels/Level7/seringapng.png" id="5_ge6pi"]
 [ext_resource type="Script" path="res://levels/level_4/Seringapng.gd" id="6_nf1hg"]
 [ext_resource type="Texture2D" uid="uid://4g3tdktwb6e1" path="res://assets/ui/smaller.png" id="7_qgq0b"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puaqk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nejcx"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d78mk"]
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l31p0"]
+bg_color = Color(0.811765, 0.811765, 0.811765, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lospy"]
+
+[sub_resource type="Animation" id="Animation_0xg74"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.96, 0.96), Vector2(1.28, 1.28)]
+}
+
+[sub_resource type="Animation" id="Animation_sgqfx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.96, 0.96)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6hgf4"]
+_data = {
+"RESET": SubResource("Animation_sgqfx"),
+"idle": SubResource("Animation_0xg74")
+}
 
 [node name="Level4" type="Node2D"]
 script = ExtResource("1_it3b4")
@@ -31,42 +108,74 @@ visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-[node name="Algod" type="Sprite2D" parent="."]
+[node name="Cotton" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(280, 432)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_ygeax")
+script = ExtResource("4_d6p57")
 
 [node name="BraçoSangue" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1051, 336)
 scale = Vector2(0.378738, 0.378738)
 texture = ExtResource("4_om0qj")
 
-[node name="Seringapng" type="Sprite2D" parent="."]
+[node name="Syringe" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-112, 0)
 scale = Vector2(0.15, 0.235)
 texture = ExtResource("5_ge6pi")
 script = ExtResource("6_nf1hg")
 
-[node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-flat = true
-
-[node name="InnerArrows" type="Sprite2D" parent="."]
-position = Vector2(832, 392)
-scale = Vector2(0.96, 0.96)
-texture = ExtResource("7_qgq0b")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="InnerArrows"]
-
-[node name="Button2" type="Button" parent="."]
+[node name="BloodButton" type="Button" parent="."]
+visible = false
+self_modulate = Color(1, 0.627451, 0.588235, 1)
 offset_left = 984.0
 offset_top = 432.0
 offset_right = 1016.0
 offset_bottom = 464.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_puaqk")
-theme_override_styles/hover = SubResource("StyleBoxFlat_puaqk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_puaqk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nejcx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d78mk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l31p0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lospy")
+icon_alignment = 1
+
+[node name="InnerArrows" type="Sprite2D" parent="BloodButton"]
+position = Vector2(16, 16)
+scale = Vector2(0.96, 0.96)
+texture = ExtResource("7_qgq0b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BloodButton/InnerArrows"]
+libraries = {
+"": SubResource("AnimationLibrary_6hgf4")
+}
+autoplay = "idle"
+
+[node name="CottonButton" type="Button" parent="."]
+visible = false
+self_modulate = Color(1, 0.627451, 0.588235, 1)
+offset_left = 984.0
+offset_top = 432.0
+offset_right = 1016.0
+offset_bottom = 464.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nejcx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d78mk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l31p0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lospy")
+icon_alignment = 1
+
+[node name="InnerArrows" type="Sprite2D" parent="CottonButton"]
+position = Vector2(16, 16)
+scale = Vector2(0.96, 0.96)
+texture = ExtResource("7_qgq0b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CottonButton/InnerArrows"]
+libraries = {
+"": SubResource("AnimationLibrary_6hgf4")
+}
+autoplay = "idle"
 
 [connection signal="next_button_pressed" from="DialogueScene" to="." method="_on_dialogue_scene_next_button_pressed"]
+[connection signal="pressed" from="BloodButton" to="." method="_on_blood_button_pressed"]
+[connection signal="pressed" from="CottonButton" to="." method="_on_cotton_button_pressed"]

@@ -32,42 +32,19 @@ func next_scene():
 		return
 	match json_count:
 		1:
-			var json_as_text = FileAccess.get_file_as_string("res://levels/level_3/jsons/FASE3P2.json")
+			var json_as_text = FileAccess.get_file_as_string("res://levels/level_4/jsons/FASE4P2.json")
 			scenarios = JSON.parse_string(json_as_text)
 			json_count += 1
 			
-			next_scene()
+			$Syringe.visible = true
+			$BloodButton.visible = true
+			$BraçoSangue.visible = true
+			dialogue_scene.visible = false
+			
 			return
 		2:
-			var json_as_text = FileAccess.get_file_as_string("res://levels/level_3/jsons/FASE3P3.json")
-			scenarios = JSON.parse_string(json_as_text)
-			json_count += 1
-			
-			dialogue_scene.visible = false
-			animation.play("folhas_ruins")
-			return
-		3:
-			var json_as_text = FileAccess.get_file_as_string("res://levels/level_3/jsons/FASE3P4.json")
-			scenarios = JSON.parse_string(json_as_text)
-			json_count += 1
-			
-			dialogue_scene.visible = false
-			animation.play("folhas_boas")
-			return
-		4:
-			var json_as_text = FileAccess.get_file_as_string("res://levels/level_3/jsons/FASE3P5.json")
-			scenarios = JSON.parse_string(json_as_text)
-			json_count += 1
-			next_scene()
-			return
-		5:
-			var json_as_text = FileAccess.get_file_as_string("res://levels/level_3/jsons/FASE3P6.json")
-			scenarios = JSON.parse_string(json_as_text)
-			json_count += 1
-			next_scene()
-			return
-		6:
 			end.emit()
+			return
 	print("Erro fudeu")
 	emit_signal("end")
 
@@ -76,17 +53,21 @@ func _on_dialogue_scene_next_button_pressed():
 	next_scene()
 
 
-func _on_negar_pressed():
+func _on_blood_button_pressed():
+	$BloodButton.queue_free()
+	$Syringe.queue_free()
+	$Cotton.visible = true
+	$CottonButton.visible = true
+
+
+func _on_cotton_button_pressed():
+	$CottonButton.queue_free()
+	$Cotton.queue_free()
+	$BraçoSangue.queue_free()
 	dialogue_scene.visible = true
-	$FolhasRuins.queue_free()
+	
 	next_scene()
 
 
-func _on_aprovar_pressed():
-	dialogue_scene.visible = true
-	$FolhasBoas.queue_free()
-	next_scene()
-
-
-func _on_texture_button_pressed():
-	print("botao")
+func _on_blood_button_button_down():
+	pass # Replace with function body.
