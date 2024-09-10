@@ -1,0 +1,80 @@
+[ 
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Doutora Anita",
+	"text": "Claro! Venha junto da sua irmã amanhã! Aliais, é sempre bom ter um acompanhante depois de exames de sangue, então você vai estar ajudando-a!  Mas antes, vamos nos preparar, que tal?!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+  },  
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Anna Saúde",
+	"text": "Eu posso acompanhar? Eu quero aprender mais sobre tudo do SUS!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/AnaSaude/AnaSaude.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  },
+{
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Doutora Anita",
+	"text": "Vamos agendar ele para amanhã! Lembre de trazer seus documentos e de preencher esse potinho com urina! Além disso, você tem que estar num jejum de 10h!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": false
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Maria Saúde",
+	"text": "Ah sim, sim! E podemos já fazer esse exame?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": false
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Doutora Anita",
+	"text": "beta hCG! É bem simples, vamos agendar de fazer uma coleta de sangue em você primeiro! Não se preocupe, é super tranquilo!",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/dra.png",
+		"row": 2,
+		"column": 5,
+		"is_flipped": true
+	  }
+	]
+  },
+  {
+	"background": "res://assets/Backgrounds/recepção.png",
+	"title": "Maria Saúde",
+	"text": "Aliás, eu estava vendo que para começar meu pré natal eu preciso fazer um exame, um tal de beta…algo? Que exame é esse? ele é demorado?",
+	"character_data": [
+	  {
+		"character_texture": "res://assets/Characters/Others/irmã.png",
+		"row": 2,
+		"column": 1,
+		"is_flipped": true
+	  }
+	]
+  }
+]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cnjas8okalti"]
+[gd_scene load_steps=16 format=3 uid="uid://cnjas8okalti"]
 
 [ext_resource type="Script" path="res://MainMap/main_map.gd" id="1_p2mt1"]
 [ext_resource type="Script" path="res://MainMap/CurrentLevel.gd" id="2_ysdqk"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dnhbcsbhivh84" path="res://levels/level_1/level_1.tscn" id="5_eg8ef"]
 [ext_resource type="PackedScene" uid="uid://m8s2d1gtnsak" path="res://Utils/LevelPreviewer/level_previewer.tscn" id="6_63tjb"]
 [ext_resource type="PackedScene" uid="uid://c0v3m48f2fqrr" path="res://levels/level_2/level2.tscn" id="8_d43rf"]
+[ext_resource type="PackedScene" uid="uid://cpw1rw0wregf1" path="res://levels/level_3/level3.tscn" id="9_47my5"]
+[ext_resource type="PackedScene" uid="uid://ce2kdkha7w27" path="res://levels/level_4/level_4.tscn" id="10_d6yno"]
 
 [sub_resource type="Animation" id="Animation_lmye6"]
 length = 0.001
@@ -325,7 +327,7 @@ shape = SubResource("RectangleShape2D_gq6jg")
 position = Vector2(472, 408)
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint3" instance=ExtResource("6_63tjb")]
-level = ExtResource("8_d43rf")
+level = ExtResource("9_47my5")
 title = "Nivel 3"
 text = "Textão sobre o nivel 3"
 
@@ -339,7 +341,7 @@ shape = SubResource("RectangleShape2D_h2pgp")
 position = Vector2(240, 408)
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint4" instance=ExtResource("6_63tjb")]
-level = ExtResource("5_eg8ef")
+level = ExtResource("10_d6yno")
 title = "Princípios do SUS"
 text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!Pressione espaço para continuar."
 

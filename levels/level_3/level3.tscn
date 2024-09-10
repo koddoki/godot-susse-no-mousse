@@ -1,15 +1,229 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpw1rw0wregf1"]
+[gd_scene load_steps=15 format=3 uid="uid://cpw1rw0wregf1"]
 
 [ext_resource type="Script" path="res://levels/level_3/level3.gd" id="1_5eqkr"]
-[ext_resource type="PackedScene" uid="uid://cermugu5citsm" path="res://levels/level_3/postit.tscn" id="1_t61w6"]
 [ext_resource type="PackedScene" uid="uid://b6tg1l8pm2s2s" path="res://dialogue/dialogue_scene.tscn" id="3_j4ns7"]
 [ext_resource type="Texture2D" uid="uid://pu7ca57lduvm" path="res://assets/Levels/Level3/folha ruim.png" id="4_bt0er"]
+[ext_resource type="Texture2D" uid="uid://cwrlqhjspyj2k" path="res://assets/Levels/Level3/checkno.png" id="4_i3164"]
 [ext_resource type="Texture2D" uid="uid://cb7bvcku213mn" path="res://assets/Levels/Level3/postitruim2.png" id="5_sgjt2"]
 [ext_resource type="Texture2D" uid="uid://cqjjyvt2oocvl" path="res://assets/Levels/Level3/postitruim.png" id="6_hjlu2"]
+[ext_resource type="Texture2D" uid="uid://dyxwvx2kmt2pg" path="res://assets/Levels/Level3/folha boa.png" id="7_0tinn"]
+[ext_resource type="Texture2D" uid="uid://ygepx8dyyymx" path="res://assets/Levels/Level3/check.png" id="8_8fq0o"]
+[ext_resource type="Texture2D" uid="uid://mwvd63a3tovj" path="res://assets/Levels/Level3/postitbom.png" id="9_6t5b1"]
+[ext_resource type="Texture2D" uid="uid://8x1ststysohj" path="res://assets/Levels/Level3/postitbom2.png" id="10_wib6c"]
+
+[sub_resource type="Animation" id="Animation_algsa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FolhasRuins:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FolhasRuins:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FolhasRuins/Negar:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FolhasRuins/Negar:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FolhasBoas:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FolhasBoas:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("FolhasBoas/Aprovar:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FolhasBoas/Aprovar:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c2k7o"]
+resource_name = "folhas_boas"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FolhasBoas:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FolhasBoas:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FolhasBoas/Aprovar:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FolhasBoas/Aprovar:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.5, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qibtf"]
+resource_name = "folhas_ruins"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FolhasRuins:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FolhasRuins:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FolhasRuins/Negar:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FolhasRuins/Negar:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.5, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hufwb"]
+_data = {
+"RESET": SubResource("Animation_algsa"),
+"folhas_boas": SubResource("Animation_c2k7o"),
+"folhas_ruins": SubResource("Animation_qibtf")
+}
 
 [node name="Level3" type="Node2D"]
-position = Vector2(1136, 368)
 script = ExtResource("1_5eqkr")
+metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1152.0
@@ -17,33 +231,109 @@ offset_bottom = 648.0
 expand_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="postit" parent="." instance=ExtResource("1_t61w6")]
-position = Vector2(560, 88)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="FolhasRuins" type="Node2D" parent="."]
 visible = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-visible = false
-polygon = PackedVector2Array(-1496, -874, -635.046, -876.086, 1393, -881, 1392, 989, -1496, 978, -1499, -872, -1153, -649, -1155, 644, 1150, 648, 1153, -655, -1153, -648)
+[node name="FolhaRuim" type="Sprite2D" parent="FolhasRuins"]
+position = Vector2(270.15, 306.58)
+scale = Vector2(0.432644, 0.432644)
+texture = ExtResource("4_bt0er")
+metadata/_edit_group_ = true
 
-[node name="postit2" parent="." instance=ExtResource("1_t61w6")]
-position = Vector2(408, -496)
+[node name="Checkno" type="Sprite2D" parent="FolhasRuins/FolhaRuim"]
+position = Vector2(-212.993, -151.58)
+scale = Vector2(0.115569, 0.115569)
+texture = ExtResource("4_i3164")
+
+[node name="Checkno2" type="Sprite2D" parent="FolhasRuins/FolhaRuim"]
+position = Vector2(-212.993, -45.2567)
+scale = Vector2(0.115569, 0.115569)
+texture = ExtResource("4_i3164")
+
+[node name="Checkno3" type="Sprite2D" parent="FolhasRuins/FolhaRuim"]
+position = Vector2(-210.681, 58.755)
+scale = Vector2(0.115569, 0.115569)
+texture = ExtResource("4_i3164")
+
+[node name="Postitruim" type="Sprite2D" parent="FolhasRuins"]
+position = Vector2(613, 172)
+scale = Vector2(0.320953, 0.320953)
+texture = ExtResource("6_hjlu2")
+
+[node name="Postitruim2" type="Sprite2D" parent="FolhasRuins"]
+position = Vector2(845, 355)
+scale = Vector2(0.314309, 0.314309)
+texture = ExtResource("5_sgjt2")
+
+[node name="Negar" type="Button" parent="FolhasRuins"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 513.0
+offset_top = 395.0
+offset_right = 665.0
+offset_bottom = 484.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+disabled = true
+text = "NEGAR"
+
+[node name="FolhasBoas" type="Node2D" parent="."]
+visible = false
+
+[node name="FolhaBoa" type="Sprite2D" parent="FolhasBoas"]
+position = Vector2(270.15, 306.58)
+scale = Vector2(0.432644, 0.432644)
+texture = ExtResource("7_0tinn")
+
+[node name="CheckYes" type="Sprite2D" parent="FolhasBoas/FolhaBoa"]
+position = Vector2(-215.304, -197.807)
+scale = Vector2(0.115569, 0.115569)
+texture = ExtResource("8_8fq0o")
+
+[node name="CheckYes2" type="Sprite2D" parent="FolhasBoas/FolhaBoa"]
+position = Vector2(-212.993, -63.7475)
+scale = Vector2(0.115569, 0.115569)
+texture = ExtResource("8_8fq0o")
+
+[node name="CheckYes3" type="Sprite2D" parent="FolhasBoas/FolhaBoa"]
+position = Vector2(-210.681, 58.755)
+scale = Vector2(0.115569, 0.115569)
+texture = ExtResource("8_8fq0o")
+
+[node name="CheckYes4" type="Sprite2D" parent="FolhasBoas/FolhaBoa"]
+position = Vector2(-215.304, 192.814)
+scale = Vector2(0.115569, 0.115569)
+texture = ExtResource("8_8fq0o")
+
+[node name="PostitBom" type="Sprite2D" parent="FolhasBoas"]
+position = Vector2(613, 172)
+scale = Vector2(0.320953, 0.320953)
+texture = ExtResource("9_6t5b1")
+
+[node name="PostitBom2" type="Sprite2D" parent="FolhasBoas"]
+position = Vector2(845, 355)
+scale = Vector2(0.314309, 0.314309)
+texture = ExtResource("10_wib6c")
+
+[node name="Aprovar" type="Button" parent="FolhasBoas"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 513.0
+offset_top = 395.0
+offset_right = 665.0
+offset_bottom = 484.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+disabled = true
+text = "Aprovar
+"
 
 [node name="DialogueScene" parent="." instance=ExtResource("3_j4ns7")]
 visible = false
 
-[node name="FolhaRuim" type="Sprite2D" parent="."]
-position = Vector2(-880, -88)
-scale = Vector2(0.311147, 0.311147)
-texture = ExtResource("4_bt0er")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hufwb")
+}
 
-[node name="Postitruim2" type="Sprite2D" parent="."]
-position = Vector2(-368, 24)
-scale = Vector2(0.314309, 0.314309)
-texture = ExtResource("5_sgjt2")
-
-[node name="Postitruim" type="Sprite2D" parent="."]
-position = Vector2(-504, -152)
-scale = Vector2(0.320953, 0.320953)
-texture = ExtResource("6_hjlu2")
+[connection signal="pressed" from="FolhasRuins/Negar" to="." method="_on_negar_pressed"]
+[connection signal="pressed" from="FolhasBoas/Aprovar" to="." method="_on_aprovar_pressed"]
+[connection signal="next_button_pressed" from="DialogueScene" to="." method="_on_dialogue_scene_next_button_pressed"]
