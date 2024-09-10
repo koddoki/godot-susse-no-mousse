@@ -401,7 +401,7 @@ texture = ExtResource("6_0e7vb")
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint1" instance=ExtResource("6_63tjb")]
 level = ExtResource("5_eg8ef")
-title = "Introdução"
+title = "Vamos nos conhecer!"
 text = ""
 
 [node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint1/LevelPreviewer"]
@@ -421,7 +421,7 @@ texture = ExtResource("9_5j7s6")
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint2" instance=ExtResource("6_63tjb")]
 level = ExtResource("8_d43rf")
-title = "Princípios do SUS"
+title = "Pilares do SUS"
 text = "Aprenda sobre os princípios básicos do SUS e seus principais pilares!"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint2/LevelPreviewer"]
@@ -441,7 +441,7 @@ texture = ExtResource("11_bqwnj")
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint3" instance=ExtResource("6_63tjb")]
 level = ExtResource("9_47my5")
-title = "Um sus só pra mim"
+title = "Meu SUS"
 text = "Aprenda como o SUS surge e como iniciar seu atendimento!"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint3/LevelPreviewer"]
@@ -461,7 +461,7 @@ texture = ExtResource("13_cm6hi")
 
 [node name="LevelPreviewer" parent="SpawnPoints/SpawnPoint4" instance=ExtResource("6_63tjb")]
 level = ExtResource("10_d6yno")
-title = "Mão na massa"
+title = "Atuando!"
 text = "Vamos fazer uma coleta gratuita pelo SUS!"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="SpawnPoints/SpawnPoint4/LevelPreviewer"]

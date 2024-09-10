@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://ccduosbudtlt2"]
 
+[ext_resource type="Script" path="res://player/player.gd" id="1_4pdqu"]
 [ext_resource type="Texture2D" uid="uid://v1tj73eu7uda" path="res://assets/Characters/Basic Charakter Spritesheet.png" id="1_16qip"]
-[ext_resource type="Script" path="res://player/player.cs" id="1_kq524"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0wgnd"]
 atlas = ExtResource("1_16qip")
@@ -162,14 +162,13 @@ animations = [{
 size = Vector2(2, 2)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_kq524")
-IsLocked = false
+script = ExtResource("1_4pdqu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -24)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_6fuwi")
-animation = &"idle_front"
+animation = &"walk_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(4, 4)

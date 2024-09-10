@@ -53,4 +53,5 @@ func _physics_process(delta):
 
 func _on_button_pressed():
 	corre = true
+	$Button.disabled = true
 	button_pressed.emit()

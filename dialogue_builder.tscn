@@ -1,9 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgnpv5n5ioyh8"]
+[gd_scene load_steps=2 format=3 uid="uid://dgnpv5n5ioyh8"]
 
-[ext_resource type="Script" path="res://dialogue_builder.cs" id="1_s3oss"]
 [ext_resource type="PackedScene" uid="uid://b6tg1l8pm2s2s" path="res://dialogue/dialogue_scene.tscn" id="2_ji4ic"]
 
 [node name="DialogueBuilder" type="Node2D"]
-script = ExtResource("1_s3oss")
 
 [node name="DialogueScene" parent="." instance=ExtResource("2_ji4ic")]

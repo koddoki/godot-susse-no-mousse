@@ -406,6 +406,6 @@ offset_left = 992.0
 offset_top = 480.0
 offset_right = 1096.0
 offset_bottom = 511.0
-text = "BOTÃO"
+text = "PRÓXIMO"
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
